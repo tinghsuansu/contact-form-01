@@ -1,0 +1,216 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/**/
+
+body{
+	background: url(contact-form_bg.jpg) #C2E6F9 center center fixed no-repeat;
+	background-size: cover;
+}
+
+h1{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 48px;
+	color: #335C48;
+	background-color: #D5F0FF;
+	padding: 0 16px;
+	white-space: nowrap;
+}
+
+form{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.thin-line{
+	height: 1px;
+	background-color: #335C48;
+	border-width: 0;
+	margin: 0px;
+}
+
+.thick-line{
+	height: 2px;
+	background-color: #335C48;
+	border-width: 0;
+	margin: 4px 0;
+}
+
+.title{
+	position: relative;
+	height: 48px;
+}
+
+.title h1{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	z-index: 1;
+}
+
+.title-line{
+	position:inherit;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.float{
+	background: linear-gradient(156.35deg, #D5F0FF 13.16%, #DCFBFF 86.93%), #C2E6F9;
+	box-shadow: 0px 4px 10px -4px rgba(31, 95, 126, 0.25), 0px 25px 33px -11px rgba(31, 95, 126, 0.25), 0px 101px 88px -39px rgba(31, 95, 126, 0.15);
+	width: 720px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	padding: 40px 0;
+}
+
+.float h1{
+	text-align: center;
+}
+
+.contact-form{
+	margin: 32px 40px;
+}
+
+.contact-form label{
+	display: block;
+	font-size: 16px;
+	margin-bottom: 8px;
+	color: #335C48;
+}
+
+.contact-form input[type=text],textarea{
+	font-size: 16px;
+	padding: 8px;
+	box-sizing: border-box;
+	border: #335C48 solid 1px;
+	border-radius: 4px;
+	background-color:rgba(255,255,255,0.3);
+	width: inherit;
+	margin-bottom: 24px;
+}
+
+.contact-form input[type=text]:focus{
+	outline: none;
+	border: #335C48 solid 1px;
+	background-color:rgba(255,255,255,0.8);
+}
+
+.contact-form textarea:focus{
+	outline: none;
+	border: #335C48 solid 1px;
+	background-color:rgba(255,255,255,0.8);
+}
+
+.row{
+	display: flex;
+	justify-content: space-between;
+}
+
+.col{
+	width: 100%;
+	margin: 0 8px;
+}
+
+textarea {
+	width: 100%;
+	box-sizing: border-box;
+	overflow: auto;
+}
+
+.textarea-container{
+	padding-right: 16px;
+}
+
+.contact-form input[type=submit]{
+	background-color: #335C48;
+	color: #fff;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 16px;
+	margin: auto;
+	padding: 12px;
+	width: 160px;
+	border: none;
+	border-radius: 4px;
+	border: #335C48 solid 1px;
+}
+
+.contact-form input[type=submit]:hover{
+	color: #335C48;
+	background-color:rgba(51,92,72,0.3);
+}
+
+@media screen and (max-width: 768px){
+	.float{
+		width: 80%;
+	}
+
+	.float h1{
+		font-size: 40px;
+	}
+}
+
+@media screen and (max-width: 576px){
+	.float{
+		min-width: 328px;
+	}
+
+	.row{
+		flex-direction: column;
+	}
+
+	.col{
+		margin: 0;
+	}
+
+	.textarea-container{
+		padding-right: 0px;
+	}
+}
